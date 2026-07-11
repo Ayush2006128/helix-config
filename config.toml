@@ -1,0 +1,12 @@
+theme = "catppuccin_mocha"
+
+[editor]
+cursorline = true
+bufferline = "always"
+
+[keys.insert]
+"C-s" = ["normal_mode", ":write"]
+
+[keys.normal]
+"C-s" = ":write"
+"C-n" = "file_picker"

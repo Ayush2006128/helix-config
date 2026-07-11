@@ -1,0 +1,23 @@
+# --- RUST CONFIGURATION ---
+[[language]]
+name = "rust"
+auto-format = true
+
+[language-server.rust-analyzer.config]
+checkOnSave = true
+cargo = { loadOutDirsFromCheck = true }
+procMacro = { enable = true }
+
+# --- PYTHON CONFIGURATION ---
+[[language]]
+name = "python"
+auto-format = true
+language-servers = ["pyright", "ruff"] # Uses ty for types/autocomplete and ruff for diagnostics
+
+[language-server.pyright]
+command = "pyright-langserver"
+args = ["--stdio"]
+
+[language-server.ruff]
+command = "ruff"
+args = ["server"]
