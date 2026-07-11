@@ -21,3 +21,18 @@ args = ["--stdio"]
 [language-server.ruff]
 command = "ruff"
 args = ["server"]
+
+# --- RUBY CONFIGURATION ---
+[[language]]
+name = "ruby"
+auto-format = true
+language-servers = ["solargraph"] # Code completion, go-to-definition, and diagnostics
+
+[language-server.solargraph]
+command = "solargraph"
+args = ["stdio"]
+
+# Optional alternative LSP: ruby-lsp
+# [language-server.ruby-lsp]
+# command = "ruby-lsp"
+# args = ["stdio"]
