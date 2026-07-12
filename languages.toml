@@ -26,13 +26,14 @@ args = ["server"]
 [[language]]
 name = "ruby"
 auto-format = true
-language-servers = ["solargraph"] # Code completion, go-to-definition, and diagnostics
+language-servers = ["ruby-lsp", "solargraph"] # Uses ruby-lsp for linting/formatting and Solargraph for other
 
 [language-server.solargraph]
 command = "solargraph"
 args = ["stdio"]
+config = { diagnostics = false, formatting = false }
 
-# Optional alternative LSP: ruby-lsp
-# [language-server.ruby-lsp]
-# command = "ruby-lsp"
-# args = ["stdio"]
+[language-server.ruby-lsp]
+command = "ruby-lsp"
+args = ["stdio"]
+config = { diagnostics = true, formatting = true }
