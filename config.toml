@@ -10,3 +10,5 @@ bufferline = "always"
 [keys.normal]
 "C-s" = ":write"
 "C-n" = "file_picker"
+"C-A-r" = ":config-reload"
+g = { a = "code_action" }

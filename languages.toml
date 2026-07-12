@@ -12,7 +12,7 @@ procMacro = { enable = true }
 [[language]]
 name = "python"
 auto-format = true
-language-servers = ["pyright", "ruff"] # Uses ty for types/autocomplete and ruff for diagnostics
+language-servers = ["pyright", "ruff"] # Uses pyright for types/autocomplete and ruff for diagnostics
 
 [language-server.pyright]
 command = "pyright-langserver"
