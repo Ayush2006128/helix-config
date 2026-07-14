@@ -37,3 +37,38 @@ config = { diagnostics = false, formatting = false }
 command = "ruby-lsp"
 args = ["stdio"]
 config = { diagnostics = true, formatting = true }
+
+# --- WEB DEVELOPMENT CONFIGURATION ---
+[[language]]
+name = "html"
+auto-format = true
+language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "css"
+auto-format = true
+language-servers = [ "vscode-css-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "javascript"
+auto-format = true
+language-servers = [ "typescript-language-server" ]
+
+[[language]]
+name = "jsx"
+auto-format = true
+language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "typescript"
+auto-format = true
+language-servers = [ "typescript-language-server" ]
+
+[[language]]
+name = "tsx"
+auto-format = true
+language-servers = [ "typescript-language-server", "tailwindcss-ls" ]
+
+[language-server.tailwindcss-ls]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
