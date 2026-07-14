@@ -1,23 +1,46 @@
-# My Helix config
+# My Helix Config
 
-This config is fine-tuned for my use with the help of AI.
-You can use it if you are same as me and have less expectations.
+This config is fine-tuned for my personal use with the help of AI. 
+You can use it if you share similar workflow preferences and want a clean, fast setup out of the box.
 
-Currently it has support for Rust, Python and Ruby and basic keymaps.
+Currently, it has built-in support for **Rust, Python, Ruby**, and **Web Development** (HTML, CSS, JS/TS, Tailwind CSS) alongside some essential custom keymaps.
 
-## Keymaps:
-- `Ctrl+s` saved the file and if in insert mode then goes to normal mode
-- `Ctrl+n` opens file picker (only in normal mode)
-- `Ctrl+Alt+r` reloads config (only in normal mode)
-- `ga` code actions
+## 🚀 Features
+- **Auto-formatting** on save enabled for most languages.
+- **Bufferline** enabled (displays open buffers as tabs).
+- **Current Line Highlight** to always know where your cursor is.
 
-It also enables tabline (bufferline in this case) and highlights current line
+## ⌨️ Keymaps
 
-## Requirements:
-- *Ruff (LSP & FormatterPython)* `uv tool install ruff`
-- *Pyright (LSP for Python)* `uv tool install pyright`
-- *Rust analyser* `rustup component add rust-analyzer`
-- *Solargraph (LSP for Ruby)* `gem install solargraph`
-- A *Nerd Font* installed _I use JetBrainsMono_
+- `Ctrl+s` - Saves the file (returns to normal mode if in insert mode).
+- `Ctrl+n` - Opens file picker (only in normal mode).
+- `Ctrl+Alt+r` - Reloads the Helix configuration (only in normal mode).
+- `ga` - Opens code actions.
 
-That's it! Enjoy your new editor.
+## 📦 Requirements
+
+To get the most out of the language server configurations, you need to install the following dependencies:
+
+### Rust
+- **Rust Analyzer**: `rustup component add rust-analyzer`
+
+### Python
+- **Ruff** (LSP & Formatter): `uv tool install ruff`
+- **Pyright** (Types & Autocomplete): `uv tool install pyright`
+
+### Ruby
+- **Solargraph** (LSP for Ruby): `gem install solargraph`
+- **Ruby-LSP** (Linting & Formatting): `gem install ruby-lsp`
+
+### Web Development
+- **HTML, CSS, TS/JS, & Tailwind**:
+  ```bash
+  npm install -g vscode-langservers-extracted typescript typescript-language-server @tailwindcss/language-server
+  ```
+
+### Fonts
+- A **Nerd Font** installed (_I use JetBrainsMono_).
+
+---
+
+That's it! Enjoy your new editor setup.
